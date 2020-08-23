@@ -1,0 +1,83 @@
+<header class="em-c-header em-c-header--large" role="banner">
+  <div class="em-l-container em-c-header__inner">
+    <div class="em-c-header__body">
+      <div class="em-c-header__title-container">
+        <h2 class="em-c-header__title"><a href="#" rel="home" class="em-c-header__title-link">Orbit Application</a></h2>
+      </div>
+      <!-- end em-c-header__left -->
+      <button class="em-c-btn em-c-btn--small em-c-btn--inverted em-c-header__nav-btn em-js-nav-trigger">
+        <div class="em-c-btn__inner">
+          <svg class="em-c-icon em-c-icon--small em-c-btn__icon em-js-btn-icon" data-em-btn-toggle-text="Close" data-em-icon-path="../assets/unity-1.5.0/images/em-icons.svg">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/unity-1.5.0/images/em-icons.svg#hamburger"></use>
+          </svg>
+          <svg class="em-c-icon em-c-icon--small em-c-btn__icon em-u-is-hidden em-js-btn-swap-icon" data-em-icon-path="../assets/unity-1.5.0/images/em-icons.svg">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/unity-1.5.0/images/em-icons.svg#x-filled"></use>
+          </svg>
+          <span class="em-c-btn__text em-js-btn-label">Menu</span>
+        </div>
+      </button>
+      <!-- end em-c-btn -->
+      <div class="em-c-header__nav-container em-js-nav-panel">
+        <nav id="nav" class="em-c-primary-nav" role="navigation">
+          <ul class="em-c-primary-nav__list">
+            <li class="em-c-primary-nav__item ">
+              <a href="#" class="em-c-primary-nav__link em-is-current ">
+                  Home
+              </a>
+              <!--end em-c-primary-nav__link-->
+            </li>
+            <!-- end em-c-nav__list__item -->
+            <li class="em-c-primary-nav__item ">
+              <a href="#" class="em-c-primary-nav__link em-c-modal-with-trigger em-c-modal__trigger em-js-modal"  ng-click="close()">
+                  Create PTN
+              </a>
+              <!--end em-c-primary-nav__link-->
+            </li>
+            <!-- end em-c-nav__list__item -->
+            <li class="em-c-primary-nav__item ">
+              <a href="#" class="em-c-primary-nav__link">
+                  Create Shipment
+              </a>
+              <!--end em-c-primary-nav__link-->
+            </li>
+          </ul>
+          <!-- end em-c-nav__list -->
+        </nav>
+        <!-- end em-c-nav -->
+        <nav id="global-nav" class="em-c-global-nav" role="navigation">
+          <ul class="em-c-global-nav__list">
+            <li class="em-c-global-nav__item em-is-aligned-right">
+              <a href="#Dropdown" class="em-c-global-nav__link  em-c-global-nav__link--has-children em-js-nav-dropdown-trigger">
+                <img src="../assets/unity-1.5.0/images/user.png" alt="Alt Text" class="em-c-avatar em-c-avatar" /> Firstname Lastname
+                <svg class="em-c-icon em-c-icon--small em-c-global-nav__icon">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/unity-1.5.0/images/em-icons.svg#caret-down"></use>
+                </svg>
+              </a>
+              <!--end em-c-global-nav__link-->
+              <ul class="em-c-global-nav__sublist em-js-nav-dropdown">
+                <li class="em-c-global-nav__subitem">
+                  <a href="#Profile" class="em-c-global-nav__sublink">Profile</a>
+                </li>
+                <!-- end em-c-nav__sublist__item -->
+                <li class="em-c-global-nav__subitem">
+                  <a href="#Logout" class="em-c-global-nav__sublink">Log Out</a>
+                </li>
+                <!-- end em-c-nav__sublist__item -->
+              </ul>
+              <!-- end em-c-nav__sublist -->
+            </li>
+            <!-- end em-c-global-nav__list__item -->
+          </ul>
+          <!-- end em-c-global-nav__list -->
+        </nav>
+        <!-- end em-c-global-nav -->
+      </div>
+      <!-- end em-c-header__nav -->
+    </div>
+    <!-- end em-c-header__body -->
+  </div>
+  <!-- end em-l-container -->
+</header>
+<!-- end em-c-header -->
+<!-- uncoment the following when using SPA (e.g. Angular, React, etc). For traditional websites, Unity JS handles this automagically :) -->
+<!-- <div class="em-c-header-overlay"></div> -->
