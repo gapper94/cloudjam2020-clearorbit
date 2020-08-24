@@ -2,7 +2,7 @@
   <div class="em-l-container em-c-header__inner">
     <div class="em-c-header__body">
       <div class="em-c-header__title-container">
-        <h2 class="em-c-header__title"><a href="#" rel="home" class="em-c-header__title-link">Orbit Application</a></h2>
+        <h2 class="em-c-header__title"><a routerLink="" rel="home" class="em-c-header__title-link">Orbit Application</a></h2>
       </div>
       <!-- end em-c-header__left -->
       <button class="em-c-btn em-c-btn--small em-c-btn--inverted em-c-header__nav-btn em-js-nav-trigger">
@@ -20,20 +20,21 @@
       <div class="em-c-header__nav-container em-js-nav-panel">
         <nav id="nav" class="em-c-primary-nav" role="navigation">
           <ul class="em-c-primary-nav__list">
+
+            <!-- end em-c-nav__list__item -->
             <li class="em-c-primary-nav__item ">
-              <a href="#" class="em-c-primary-nav__link em-is-current ">
-                  Home
+              <a routerLink="/trackings/new" class="em-c-primary-nav__link em-c-modal-with-trigger em-c-modal__trigger em-js-modal">
+                  Create Tracking Number
               </a>
               <!--end em-c-primary-nav__link-->
             </li>
             <!-- end em-c-nav__list__item -->
             <li class="em-c-primary-nav__item ">
-              <a href="#" class="em-c-primary-nav__link em-c-modal-with-trigger em-c-modal__trigger em-js-modal"  ng-click="close()">
-                  Create PTN
+              <a href="/trackings" class="em-c-primary-nav__link">
+                  Tracking List
               </a>
               <!--end em-c-primary-nav__link-->
             </li>
-            <!-- end em-c-nav__list__item -->
             <li class="em-c-primary-nav__item ">
               <a href="#" class="em-c-primary-nav__link">
                   Create Shipment

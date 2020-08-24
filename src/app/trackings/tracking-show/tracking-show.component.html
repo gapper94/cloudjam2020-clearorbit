@@ -1,0 +1,108 @@
+<main role="main">
+  <div class="em-l-container">
+      <div class="em-c-page-header ">
+          <h1 class="em-c-page-header__title">
+              <!-- 'fpo' stands for 'for placement only'. 'fpo-block' should be ignored-->
+              <div class="em-u-text-align-center fpo-block">
+
+              </div>
+          </h1>
+      </div>
+      <!-- content -->
+
+  </div>
+  <!-- end em-l-container-->
+
+
+  <div class="em-c-page-header ">
+          <h1 class="em-c-page-header__title">PTN Detail - {{ptnDetail ? ptnDetail.ptnNumber : ""}} </h1>
+      </div>
+      <div class="em-c-field em-c-progress-bar em-u-max-width-100">
+          <div class="em-c-progress-bar__label">
+              <label>Delivered</label>
+              <span class="em-u-margin-left-half">20%</span>
+          </div>
+          <div class="em-c-progress-bar__bar"> <span class="em-c-progress-bar__value em-u-width-20"></span></div>
+      </div>
+
+      <h5> PTN number : PTN000000008</h5>
+      <h5> PO number : 45000000008</h5>
+      <h5> Supplier : Bank</h5>
+      <h5> Ship to : VTT</h5>
+
+
+      <div class="em-u-text-align-center">&nbsp;</div>
+      <div class="em-u-text-align-left">
+
+
+      <div class="em-c-table-object__body">
+          <div class="em-c-table-object__body-inner">
+              <table class="em-c-table ">
+              <thead class="em-c-table__header">
+                  <tr class="em-c-table__header-row">
+                  <th scope="col" class="em-c-table__header-cell ">Date & Time</th>
+                  <th scope="col" class="em-c-table__header-cell ">Status of Item</th>
+                  </tr>
+                  <!-- em-c-table__header-row -->
+              </thead>
+              <!-- end em-c-table__header -->
+              <tbody class="em-c-table__body ">
+                  <tr class="em-c-table__row ">
+                      <td class="em-c-table__cell " colspan="">
+                          29 July 2020, 10:00 AM
+                      </td>
+                      <td class="em-c-table__cell " colspan="">
+                          Delivered
+                      </td>
+                  </tr>
+                  <!-- end em-c-table__row -->
+                  <tr class="em-c-table__row ">
+                      <td class="em-c-table__cell " colspan="">
+                          28 July 2020, 9:00 AM
+                      </td>
+                      <td class="em-c-table__cell " colspan="">
+                          Loaded
+                      </td>
+                  </tr>
+                  <!-- end em-c-table__row -->
+              </tbody>
+              <!-- end em-c-table__body -->
+              <tfoot class="em-c-table__footer">
+                  <tr class="em-c-table__footer-row">
+                  </tr>
+              </tfoot>
+              <!-- end em-c-table__footer -->
+              </table>
+              <!--end em-c-table-->
+          </div>
+          <!--end em-c-table-object__body-inner-->
+      </div>
+          <a href="editPTN">
+              <button class="em-c-btn ">
+                  <span class="em-c-btn__text">Edit PTN</span>
+              </button>
+          </a>
+
+          <a href="searching" >
+              <button class="em-c-btn ">
+                  <span class="em-c-btn__text">Back</span>
+              </button>
+          </a>
+
+          <!-- <button type="button" (click)="printPTN()" class="em-c-btn ">
+              <span class="em-c-btn__text">Print</span>
+          </button> -->
+          <!-- end em-c-btn -->
+
+
+
+          <!-- <a href="">
+          <button class="em-c-btn ">
+              <span class="em-c-btn__text">Back</span>
+          </button>
+
+          </a> -->
+
+      </div>
+
+</main>
