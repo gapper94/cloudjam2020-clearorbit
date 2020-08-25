@@ -4,7 +4,10 @@ import { Subject } from "rxjs";
 import { map } from "rxjs/operators";
 import { Router } from "@angular/router";
 
+import { environment } from "../../environments/environment";
 import { Tracking } from "./tracking.model";
+
+const BACKEND_URL = environment.apiUrl + "/trackings/";
 
 @Injectable({ providedIn: "root" })
 export class TrackingsService {
@@ -15,7 +18,7 @@ export class TrackingsService {
 
   getTrackings() {
     this.http.get<{ message: string; trackings: any }>(
-        "http://localhost:3000/api/trackings"
+      BACKEND_URL
         )
         .pipe(map((trackingData) => {
           return trackingData.trackings.map(tracking => {
@@ -55,7 +58,7 @@ export class TrackingsService {
     };
     this.http
       .post<{ message: string; trackingId: string }>(
-        "http://localhost:3000/api/trackings",
+        BACKEND_URL,
         tracking
       )
       .subscribe(responseData => {
@@ -80,7 +83,7 @@ export class TrackingsService {
   }
 
   deleteTracking(trackingId: string){
-    this.http.delete("http://localhost:3000/api/trackings/" + trackingId)
+    this.http.delete(BACKEND_URL + trackingId)
       .subscribe(() => {
         const updatedTrackings = this.trackings.filter(tracking => tracking.id !== trackingId);
         this.trackings = updatedTrackings;
