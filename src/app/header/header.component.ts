@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../app.component';
-import { ProfileComponent } from '../profile/profile.component';
+import { AuthorizationService } from '../profile/authorization.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     public appComponent: AppComponent,
-    public profileComponent: ProfileComponent
+    public authorizationComponent: AuthorizationService
   ) { }
 
   ngOnInit(): void {
@@ -34,9 +34,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getProfile() {
-    this.profile = this.profileComponent.getProfile();
-    console.log(this.profile);
-
+    this.authorizationComponent.getProfile().subscribe(data => this.profile = data);
   }
 
 }

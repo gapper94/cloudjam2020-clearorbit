@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 
 const trackingSchema = mongoose.Schema({
   trackingNo: { type: String, required: true }
-  // status: { type: String, required: true },
+  // status: [
+  //   { statusCode: String,
+  //     updatedOn: String
+  //   }
+  // ]
   // shipto: { type: String, required: true },
   // unloadingPoint: { type: String, required: true },
   // recipient: { type: String, required: true },
