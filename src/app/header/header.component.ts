@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  title = 'Clear Orbit';
+  isIframe = false;
+  loggedIn = false;
+  profile;
+
+  constructor(
+    public appComponent: AppComponent,
+    public profileComponent: ProfileComponent
+  ) { }
 
   ngOnInit(): void {
+    this.getProfile();
   }
+
+  login(){
+    this.appComponent.login();
+    this.loggedIn = true;
+  }
+
+  logout(){
+    this.appComponent.logout();
+    this.loggedIn = false;
+  }
+
+  getProfile() {
+    this.profile = this.profileComponent.getProfile();
+    console.log(this.profile);
+
+  }
+
 }
+
+

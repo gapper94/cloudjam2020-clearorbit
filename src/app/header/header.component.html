@@ -49,7 +49,7 @@
                     <ul class="em-c-global-nav__list">
                         <li class="em-c-global-nav__item em-is-aligned-right">
                             <a href="#Dropdown" class="em-c-global-nav__link  em-c-global-nav__link--has-children em-js-nav-dropdown-trigger">
-                                <img src="../assets/unity-1.5.0/images/user.png" alt="Alt Text" class="em-c-avatar em-c-avatar" /> Firstname Lastname
+                                <img src="../assets/unity-1.5.0/images/user.png" alt="Alt Text" class="em-c-avatar em-c-avatar" /> {{profile?.displayName}}
                                 <svg class="em-c-icon em-c-icon--small em-c-global-nav__icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/unity-1.5.0/images/em-icons.svg#caret-down"></use>
                 </svg>
@@ -65,6 +65,9 @@
                                 </li>
                                 <!-- end em-c-nav__sublist__item -->
                             </ul>
+                            <button mat-raised-button *ngIf="!loggedIn" (click)="login()">Login</button>
+                            <button mat-raised-button *ngIf="loggedIn" (click)="logout()">Logout</button>
+
                             <!-- end em-c-nav__sublist -->
                         </li>
                         <!-- end em-c-global-nav__list__item -->
