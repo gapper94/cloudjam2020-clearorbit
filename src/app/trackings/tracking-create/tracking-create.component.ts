@@ -66,10 +66,11 @@ export class TrackingCreateComponent implements OnInit {
 
     this.trackingsService.addTracking(
       this.form.value.trackingNo,
-      // this.form.value.po,
-      // this.form.value.status,
-      // this.form.value.vendor,
-      // this.form.value.shipto
+      this.form.value.po,
+      this.form.value.status,
+      this.form.value.vendor,
+      this.form.value.shipto
+     
     );
 
     console.log("submit!");

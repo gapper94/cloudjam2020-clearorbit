@@ -24,7 +24,12 @@ export class TrackingsService {
           return trackingData.trackings.map(tracking => {
             return {
               id: tracking._id,
-              trackingNo: tracking.trackingNo
+              trackingNo: tracking.trackingNo,
+              po: tracking.po,
+              status: tracking.status,
+              vendor: tracking.vendor,
+              shipto: tracking.shipto
+
             };
           });
         }))
@@ -40,10 +45,10 @@ export class TrackingsService {
 
   addTracking(
     trackingNo: string,
-    // po: string,
-    // status:  string,
-    // vendor: string,
-    // shipto: string
+    po: string,
+    status:  string,
+    vendor: string,
+    shipto: string
     ) {
 
     // const trackingData = new FormData();
@@ -54,7 +59,11 @@ export class TrackingsService {
     // trackingData.append("shipto", shipto);
     const tracking: Tracking = {
       id: null,
-      trackingNo: trackingNo
+      trackingNo: trackingNo,
+      po: po,
+      status: status,
+      vendor: vendor,
+      shipto: shipto
     };
     this.http
       .post<{ message: string; trackingId: string }>(
@@ -73,7 +82,7 @@ export class TrackingsService {
         //   unloadingPoint: responseData.tracking.unloadingPoint,
         //   recipient: responseData.tracking.recipient,
         //   createdBy: responseData.tracking.createdBy,
-        //   createdTimeStamp: responseData.tracking.createdTimeStamp
+        // const createdTimeStamp = responseData.tracking.createdTimeStamp
 
         tracking.id = id;
         this.trackings.push(tracking);
