@@ -14,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TrackingCreateComponent } from './trackings/tracking-create/tracking-create.component';
 import { TrackingListComponent } from './trackings/tracking-list/tracking-list.component';
 import { TrackingShowComponent } from './trackings/tracking-show/tracking-show.component';
+import { TrackingUpdateComponent } from './trackings/tracking-update/tracking-update.component';
 
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
@@ -27,7 +28,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     WelcomeComponent,
     TrackingCreateComponent,
     TrackingListComponent,
-    TrackingShowComponent
+    TrackingShowComponent,
+    TrackingUpdateComponent
 
   ],
   imports: [

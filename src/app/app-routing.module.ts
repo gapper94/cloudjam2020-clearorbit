@@ -6,13 +6,15 @@ import { TrackingCreateComponent } from "./trackings/tracking-create/tracking-cr
 import { TrackingListComponent } from "./trackings/tracking-list/tracking-list.component";
 import { TrackingShowComponent } from './trackings/tracking-show/tracking-show.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TrackingUpdateComponent } from './trackings/tracking-update/tracking-update.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'trackings/new', component: TrackingCreateComponent },
+  { path: 'trackings/update', component: TrackingUpdateComponent },
   { path: 'trackings', component: TrackingListComponent },
   { path: 'trackings/:id', component: TrackingShowComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
 ]
 
 @NgModule ({
