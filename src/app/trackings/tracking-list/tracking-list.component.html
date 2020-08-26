@@ -1,64 +1,64 @@
-
 <main role="main">
-  <div class="em-l-container">
-      <div class="em-c-page-header ">
-          <h1 class="em-c-page-header__title">                    <!-- 'fpo' stands for 'for placement only'. 'fpo-block' should be ignored-->
-              <div class="em-u-text-align-center fpo-block">
+    <div class="em-l-container">
+        <div class="em-c-page-header ">
+            <h1 class="em-c-page-header__title">
+                <!-- 'fpo' stands for 'for placement only'. 'fpo-block' should be ignored-->
+                <div class="em-u-text-align-center fpo-block">
 
-              </div>
-          </h1>
-          <p class="em-c-page-header__desc">
+                </div>
+            </h1>
+            <p class="em-c-page-header__desc">
 
-          </p>
-      </div>
-     <!-- content -->
+            </p>
+        </div>
+        <!-- content -->
 
-      <div class="em-c-table-object ">
-          <div class="em-c-table-object__header">
-          </div>
-          <!--end em-c-table-object__header-->
-          <div class="em-c-table-object__body">
-              <div class="em-c-table-object__body-inner">
-                  <table class="em-c-table ">
-                      <thead class="em-c-table__header">
-                          <tr class="em-c-table__header-row">
-                              <th scope="col" class="em-c-table__header-cell em-u-width-5"></th>
-                              <th scope="col" class="em-c-table__header-cell em-u-width-40">Tracking Number</th>
-                              <th scope="col" class="em-c-table__header-cell ">Status</th>
-                              <th scope="col" class="em-c-table__header-cell ">Supplier</th>
-                              <th scope="col" class="em-c-table__header-cell ">Ship To</th>
-                              <th scope="col" class="em-c-table__header-cell ">Last update</th>
-                          </tr>
-                          <!-- em-c-table__header-row -->
-                      </thead>
-                      <!-- end em-c-table__header -->
-                      <tbody class="em-c-table__body ">
-                          <tr class="em-c-table__row " *ngFor="let tracking of trackings">
-                              <td class="em-c-table__cell">
-                                      <span class="em-c-badge em-c-badge--positive" style="background:rgb(255, 255, 255)">
+        <div class="em-c-table-object ">
+            <div class="em-c-table-object__header">
+            </div>
+            <!--end em-c-table-object__header-->
+            <div class="em-c-table-object__body">
+                <div class="em-c-table-object__body-inner">
+                    <table class="em-c-table ">
+                        <thead class="em-c-table__header">
+                            <tr class="em-c-table__header-row">
+                                <th scope="col" class="em-c-table__header-cell em-u-width-5"></th>
+                                <th scope="col" class="em-c-table__header-cell em-u-width-40">Tracking Number</th>
+                                <th scope="col" class="em-c-table__header-cell ">Status</th>
+                                <th scope="col" class="em-c-table__header-cell ">Supplier</th>
+                                <th scope="col" class="em-c-table__header-cell ">Ship To</th>
+                                <th scope="col" class="em-c-table__header-cell ">Last update</th>
+                            </tr>
+                            <!-- em-c-table__header-row -->
+                        </thead>
+                        <!-- end em-c-table__header -->
+                        <tbody class="em-c-table__body ">
+                            <tr class="em-c-table__row " *ngFor="let tracking of trackings">
+                                <td class="em-c-table__cell">
+                                    <span class="em-c-badge em-c-badge--positive" style="background:rgb(255, 255, 255)">
                                           <input  type="checkbox">
                                       </span>
-                                  </td>
-                                  <td class="em-c-table__cell">
-                                      <ul class="em-c-definition-list em-u-margin-bottom-half ">
-                                          <li class="em-c-definition-list__item  ">
-                                              <div class="em-c-definition-list__key">
-                                                  {{tracking.trackingNo}}
+                                </td>
+                                <td class="em-c-table__cell">
+                                    <ul class="em-c-definition-list em-u-margin-bottom-half ">
+                                        <li class="em-c-definition-list__item  ">
+                                            <div class="em-c-definition-list__key">
+                                                {{tracking.trackingNo}}
 
-                                              </div>
-                                              <div class="em-c-definition-list__value">
-                                              </div>
-                                          </li>
-                                      </ul>
-                                      <ul class="em-c-tags em-c-tags--light">
-                                          <li class="em-c-tags__item em-js-tags-item">
-                                              <div class="em-c-tags__link ">
-                                                      PO number
-                                              </div>
-                                          </li>
+                                            </div>
+                                            <div class="em-c-definition-list__value">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="em-c-tags em-c-tags--light">
+                                        <li class="em-c-tags__item em-js-tags-item">
+                                            <div class="em-c-tags__link ">
+                                                PO Number: {{tracking.po}}
+                                            </div>
+                                        </li>
 
-                                      </ul>
-                                      <ul class="em-c-tags em-c-tags--light">
+                                    </ul>
+                                    <ul class="em-c-tags em-c-tags--light">
                                         <li class="em-c-tags__item em-js-tags-item">
                                             <button (click)="onDelete(tracking.id)">
                                               Delete
@@ -66,40 +66,40 @@
                                         </li>
 
                                     </ul>
-                                  <td class="em-c-table__cell">Status</td>
-                                  <td class="em-c-table__cell">
-                                      <div class="em-c-media-block em-c-media-block--tiny">
+                                    <td class="em-c-table__cell">{{tracking.status}}</td>
+                                    <td class="em-c-table__cell">
+                                        <div class="em-c-media-block em-c-media-block--tiny">
 
-                                          <div class="em-c-media-block__body">
-                                              <h2 class="em-c-media-block__headline ">
-                                                  Vendor
-                                              </h2>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  <td class="em-c-table__cell">Ship to</td>
-                                  <td class="em-c-table__cell">
-                                          Last Updated
-                                  </td>
-                          </tr>
-                          <!-- <tr app-ptnlist-detail [ptnListDetail]="ptnDtoList[0]"></tr> -->
-                          <!-- <tr  *ngFor="let ptnDto of ptnDtoList" app-ptnlist-detail [ptnListDetail]="ptnDto">
+                                            <div class="em-c-media-block__body">
+                                                <h2 class="em-c-media-block__headline ">
+                                                    {{tracking.vendor}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="em-c-table__cell">{{tracking.shipto}}</td>
+                                    <td class="em-c-table__cell">
+                                        Last Updated
+                                    </td>
+                            </tr>
+                            <!-- <tr app-ptnlist-detail [ptnListDetail]="ptnDtoList[0]"></tr> -->
+                            <!-- <tr  *ngFor="let ptnDto of ptnDtoList" app-ptnlist-detail [ptnListDetail]="ptnDto">
                           </tr> -->
-                      </tbody>
-                      <!-- end em-c-table__body -->
+                        </tbody>
+                        <!-- end em-c-table__body -->
 
-                  </table>
-                  <!--end em-c-table-->
-              </div>
-              <!--end em-c-table-object__body-inner-->
-          </div>
-          <!--end em-c-table-object__body-->
-      </div>
-      <!--end em-c-table-object-->
+                    </table>
+                    <!--end em-c-table-->
+                </div>
+                <!--end em-c-table-object__body-inner-->
+            </div>
+            <!--end em-c-table-object__body-->
+        </div>
+        <!--end em-c-table-object-->
 
-      <!-- end em-c-toolbar -->
-      <div class="em-u-text-align-center">&nbsp;</div>
-      <!-- <div class="em-u-text-align-right">
+        <!-- end em-c-toolbar -->
+        <div class="em-u-text-align-center">&nbsp;</div>
+        <!-- <div class="em-u-text-align-right">
           <a href="">
           <button class="em-c-btn ">
               <span class="em-c-btn__text">Update status</span>
@@ -123,8 +123,7 @@
           </a>
 
       </div> -->
-  </div>
+    </div>
 
-  <!-- end em-l-container-->
+    <!-- end em-l-container-->
 </main>
-
