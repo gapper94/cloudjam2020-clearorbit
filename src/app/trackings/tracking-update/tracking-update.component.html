@@ -1,0 +1,55 @@
+<main class="main" role="main">
+    <div class="em-l-container">
+        <div class="em-c-page-header ">
+            <h1 class="em-c-page-header__title">Update Tracking Number</h1>
+            <p class="em-c-page-header__desc">This is a brief description of what this form is about.</p>
+        </div>
+        <!-- end em-c-page-header -->
+
+        <div class="em-l--two-column">
+            <div class="em-l__main">
+                <div class="em-l-linelength-container">
+                    <form [formGroup]="form" class="em-js-form">
+                        <fieldset class="em-c-fieldset">
+                            <legend class="em-c-fieldset__legend">This is a Legend</legend>
+
+                            <div class="em-c-field ">
+                                <label for="file" class="em-c-field__label">Tracking Number</label>
+
+                                <div class="em-c-field__body">
+                                    <input type="text" id="" formControlName="trackingNo" class="em-c-input" placeholder="Tracking Number">
+                                    <div>Please enter a tracking number</div>
+                                </div>
+                                <!-- end em-c-field__body -->
+                                <div class="em-c-field__note">This is a note about the field</div>
+                            </div>
+                            <!-- end em-c-field -->
+
+                            <div class="em-c-btn-group ">
+                                <button type="submit" class="em-c-btn em-c-btn--primary">
+                        <span class="em-c-btn__text">Update</span>
+                      </button>
+                                <!-- end em-c-btn -->
+                                <button class="em-c-btn em-c-btn--secondary">
+                        <span class="em-c-btn__text">Clear</span>
+                      </button>
+                                <!-- end em-c-btn -->
+                                <button class="em-c-btn em-c-btn--tertiary">
+                        <span class="em-c-btn__text">Cancel</span>
+                      </button>
+                                <!-- end em-c-btn -->
+                            </div>
+                            <!-- end em-c-btn-group -->
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- end em-l-main -->
+            <div class="em-l__secondary">
+            </div>
+            <!-- end em-l__secondary -->
+        </div>
+        <!-- end em-l-container -->
+    </div>
+</main>
